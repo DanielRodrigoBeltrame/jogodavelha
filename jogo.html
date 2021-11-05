@@ -1,0 +1,66 @@
+<style>
+  h1,
+  td {
+    text-align: center;
+    font-family: arial;
+  }
+
+  td {
+    font-size: 80px;
+  }
+
+  table {
+    text-align: center;
+    margin: auto;
+  }
+
+  td {
+    color: white;
+    width: 100px;
+    height: 100px;
+    background: gray;
+  }
+
+  td:hover {
+    cursor: pointer;
+    background: lightgray;
+  }
+</style>
+<h1>Jogo da Velha</h1>
+<table>
+  <tr>
+    <td onclick="marcar(this)"></td>
+    <td onclick="marcar(this)"></td>
+    <td onclick="marcar(this)"></td>
+  </tr>
+  <tr>
+    <td onclick="marcar(this)"></td>
+    <td onclick="marcar(this)"></td>
+    <td onclick="marcar(this)"></td>
+  </tr>
+  <tr>
+    <td onclick="marcar(this)"></td>
+    <td onclick="marcar(this)"></td>
+    <td onclick="marcar(this)"></td>
+  </tr>
+</table>
+<script>
+
+  const P1 = "X"
+  const P2 = "O"
+
+  var sinal = P1
+
+  function marcar(td) {
+    if (td.innerText != "") return
+
+
+    td.innerText = sinal
+
+    if (sinal == P1) {
+      sinal = P2
+    } else {
+      sinal = P1
+    }
+  }
+</script>
